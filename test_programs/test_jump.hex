@@ -1,0 +1,6 @@
+28020000  // PC 0: ADDI R1, R0, 0        ; initialize R1 = 0
+58000003  // PC 1: J +3                 ; jump to PC = 4
+28020063  // PC 2: ADDI R1, R0, 99       ; skipped due to jump
+28020063  // PC 3: ADDI R1, R0, 99       ; skipped due to jump
+28040014  // PC 4: ADDI R2, R0, 20       ; executed after jump
+70000000  // PC 5: HALT                 ; stop execution

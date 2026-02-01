@@ -1,0 +1,6 @@
+28020005  // PC 0: ADDI R1, R0, 5
+60000003  // PC 1: CALL +3 (to PC 4, saves R31=2)
+28040014  // PC 2: ADDI R2, R0, 20
+70000000  // PC 3: HALT
+28060032  // PC 4: ADDI R3, R0, 50 (function)
+6801F000  // PC 5: JR R31 (return to PC 2) 

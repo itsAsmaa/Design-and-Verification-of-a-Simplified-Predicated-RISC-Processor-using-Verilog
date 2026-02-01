@@ -1,0 +1,15 @@
+2802000A  // PC 0: ADDI R1, R0, 10 → R1 = 10 (base address for memory operations)
+
+28040064  // PC 1: ADDI R2, R0, 100 → R2 = 100 (first data value to store)
+
+280600C8  // PC 2: ADDI R3, R0, 200 → R3 = 200 (second data value to store)
+
+50041000  // PC 3: SW R2, R1, 0 → Mem[10+0] = Mem[10] = 100 (store with offset=0)
+
+50061005  // PC 4: SW R3, R1, 5 → Mem[10+5] = Mem[15] = 200 (store with offset=5, tests immediate offset calculation)
+
+48081000  // PC 5: LW R4, R1, 0 → R4 = Mem[10+0] = 100 (load with offset=0, verifies first store)
+
+480A1005  // PC 6: LW R5, R1, 5 → R5 = Mem[10+5] = 200 (load with offset=5, verifies second store and offset addressing)
+
+70000000  // PC 7: HALT → Stop execution

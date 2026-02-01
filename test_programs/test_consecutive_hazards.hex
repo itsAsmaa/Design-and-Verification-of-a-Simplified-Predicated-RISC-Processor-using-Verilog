@@ -1,0 +1,6 @@
+28020005  // PC 0: ADDI R1, R0, 5        ; R1 = 5
+28041003  // PC 1: ADDI R2, R1, 3        ; RAW hazard on R1
+28062003  // PC 2: ADDI R3, R2, 3        ; RAW hazard on R2
+28083003  // PC 3: ADDI R4, R3, 3        ; RAW hazard on R3
+280A4003  // PC 4: ADDI R5, R4, 3        ; RAW hazard on R4
+70000000  // PC 5: HALT                 ; stop execution
